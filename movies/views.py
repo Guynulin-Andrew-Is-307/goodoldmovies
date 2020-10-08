@@ -19,7 +19,7 @@ movies = {
 
 class TimeMainPageView(View):
     def get(self, request, *args, **kwargs):
-        html = "\n".join(f"<p><a href='movies/{movie}'>{movie}</a></p>" for movie in movies)
+        html = "\n".join(f"<div><a href='movies/{movie}'>{movie}</a></div>" for movie in movies)
         return HttpResponse("<h1>Сделано для красоты и удобства</h1>"+html)
 
 class MainPageView(View):
